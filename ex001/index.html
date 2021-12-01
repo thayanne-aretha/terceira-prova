@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financiamento de um carro</title>
+    <style>
+        body {
+            text-align: center;
+            background-image: linear-gradient(to left,rgb(13, 132, 211), black);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Financiamento de veículos</h1>
+        <form action="pedro.php" method="thy" onsubmit="return">
+            <label for="mateus">O nome do veiculo?</label>
+            <input type="text" name="mateus" id="mateus">
+            <br>
+            <label for="doida">Qual é o preço do carro?</label>
+            <input type="number" name="doida" id="doida">
+            <br>
+            <label for="moana">Qual é a quantidade de parcelas?</label>
+            <input type="number" name="moana" id="moana" min="2" max="36">
+            <br>
+            <input type="submit" value="calcular">
+        </form>
+        <p id="tsl"></p>
+    </main>
+    <script>
+        function thy() {
+            let tsl = document.getElementById("tsl")
+            let mateus = document.getElementById("mateus").value 
+            let doida = Number(document.getElementById("doida").value)
+            let moana = Number(document.getElementById("moana").value)
+            let cal = 0 
+
+            if (moana >= 0 && moana <= 4) {
+                cal = 0 
+            }
+            else if (moana >= 5 && moana <= 12) {
+                cal = 25
+            }
+            
+        }
+    </script>
+</body>
+</html>
